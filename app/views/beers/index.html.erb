@@ -1,0 +1,34 @@
+<div class="column-group horizontal-gutters">
+  <div class="all-50 order-2">
+    Example application for <%= link_to("ink.sapo.pt", "http://ink.sapo.pt/", target: "_blank") %> using the <%= link_to("ink-3-rails", "https://github.com/mutablestate/ink3-rails", target: "_blank") %> gem
+  </div>
+  <div class="all-50 order-r1">
+    <h2>Listing beers</h2>
+    <table class="ink-table hover">
+      <thead>
+        <tr>
+          <th class="align-left">Name</th>
+          <th class="align-left">Description</th>
+          <th class="align-left">Consumption Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @beers.each do |beer| %>
+          <tr>
+            <td><%= beer.name %></td>
+            <td><%= beer.description %></td>
+            <td><%= beer.consumption_date %></td>
+            <td>
+              <%= link_to('Show', beer, class: 'ink-button blue') %>
+              <%= link_to('Edit', edit_beer_path(beer), class: 'ink-button green') %>
+              <%= link_to('Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ink-button red') %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br />
+    <%= link_to('New Beer', new_beer_path, class: 'ink-button') %>
+  </div>
+</div>

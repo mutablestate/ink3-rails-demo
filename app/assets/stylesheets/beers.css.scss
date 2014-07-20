@@ -1,0 +1,31 @@
+#topbar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: #1a1a1a;
+  -webkit-transform: scale3d(1,1,1);
+  top: 0;
+  .ink-navigation ul.black li a {
+    padding: .7em 1em;
+    color: #bbb;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .ink-navigation ul.black li a:hover {
+    color: #fff;
+  }
+  .ink-navigation ul.black li a.logoPlaceholder:hover {
+    background: 0 0;
+  }
+  .ink-navigation ul.black li a.logoPlaceholder {
+    margin-right: .5em;
+    padding: .4em 0;
+    font-weight: 700;
+    font-size: 1.4em;
+  }
+}
+
+
+
+

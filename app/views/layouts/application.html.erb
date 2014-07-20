@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ink3RailsDemo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Ink 3 Rails Demo</title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/navigation' %>
+  <div class="ink-grid">
+    <div id="content">
+      <header>
+        <h1>
+          Ink 3 Rails Example
+        </h1>
+      </header>
 
-<%= yield %>
+      <%= yield %>
 
+      <footer>
+      </footer>
+    </div>
+    <div class="copyright push-right">
+      Try the <%= link_to("ink3-rails", "https://github.com/mutablestate/ink3-rails") %> gem
+    </div>
+  </div>
 </body>
 </html>
