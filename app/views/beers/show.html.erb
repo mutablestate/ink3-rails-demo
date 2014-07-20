@@ -1,0 +1,23 @@
+<div class="column-group horizontal-gutters">
+  <div class="all-33 order-3">
+    <p>
+      <strong>Name:</strong>
+      <%= @beer.name %>
+    </p>
+  </div>
+  <div class="all-33 order-1">
+    <p>
+      <strong>Description:</strong>
+      <%= @beer.description %>
+    </p>
+  </div>
+  <div class="all-33 order-2">
+    <p>
+      <strong>Consumption date:</strong>
+      <%= @beer.consumption_date %>
+    </p>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>
