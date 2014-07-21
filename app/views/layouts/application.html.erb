@@ -10,24 +10,26 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="ink-drawer">
   <%= render 'layouts/navigation' %>
-  <div class="ink-grid">
-    <div id="content">
-      <header>
-        <h1>
-          Ink 3 Rails Example
-        </h1>
-      </header>
-
+  <div id="content" class="content-drawer">
+    <section class="ink">
+      <div class="ink-grid">
+        <header>
+          <h1>
+            Ink 3 Rails Example
+          </h1>
+        </header>
       <%= yield %>
-
-      <footer>
-      </footer>
-    </div>
-    <div class="copyright push-right">
-      Try the <%= link_to("ink3-rails", "https://github.com/mutablestate/ink3-rails") %> gem
-    </div>
+    </section>
+    <footer></footer>
+    <section class="copyright">
+      <div class="ink-grid">
+        <div class="copyright push-right">
+          Try the <%= link_to("ink3-rails", "https://github.com/mutablestate/ink3-rails") %> gem
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 </html>
